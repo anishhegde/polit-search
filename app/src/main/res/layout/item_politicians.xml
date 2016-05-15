@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_item_polit">
+
+    <download.anishhegde.com.downloaddata.CustomViews.PolitTextView
+        android:id="@+id/text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_polit_name_size"
+        android:text="@string/default_text" />
+
+    <LinearLayout
+        android:id="@+id/layout_party"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_name">
+
+        <download.anishhegde.com.downloaddata.CustomViews.PolitTextView
+            android:id="@+id/text_party"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="3"
+            android:text="@string/party_name_text"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/colon_delimiter"/>
+
+        <download.anishhegde.com.downloaddata.CustomViews.PolitTextView
+            android:id="@+id/text_party_value"
+            android:paddingLeft="@dimen/padding_left_polit_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_text"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_party">
+
+        <download.anishhegde.com.downloaddata.CustomViews.PolitTextView
+            android:id="@+id/text_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="3"
+            android:text="@string/state_name_text"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/colon_delimiter"/>
+
+        <download.anishhegde.com.downloaddata.CustomViews.PolitTextView
+            android:id="@+id/text_state_value"
+            android:paddingLeft="@dimen/padding_left_polit_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_text"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_district"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_state">
+
+        <download.anishhegde.com.downloaddata.CustomViews.PolitTextView
+            android:id="@+id/text_district"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="3"
+            android:text="@string/district_name_text"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/colon_delimiter"/>
+
+        <download.anishhegde.com.downloaddata.CustomViews.PolitTextView
+            android:id="@+id/text_disctrict_value"
+            android:paddingLeft="@dimen/padding_left_polit_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_text"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_district">
+
+        <download.anishhegde.com.downloaddata.CustomViews.PolitTextView
+            android:id="@+id/text_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="3"
+            android:text="@string/phone_name_text"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/colon_delimiter"/>
+
+        <download.anishhegde.com.downloaddata.CustomViews.PolitTextView
+            android:id="@+id/text_phone_value"
+            android:paddingLeft="@dimen/padding_left_polit_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_text"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_office"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_phone">
+
+        <download.anishhegde.com.downloaddata.CustomViews.PolitTextView
+            android:id="@+id/text_office"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="3"
+            android:text="@string/office_name_text"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/colon_delimiter"/>
+
+        <download.anishhegde.com.downloaddata.CustomViews.PolitTextView
+            android:id="@+id/text_office_value"
+            android:paddingLeft="@dimen/padding_left_polit_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_text"/>
+
+    </LinearLayout>
+</RelativeLayout>

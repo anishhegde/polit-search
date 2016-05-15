@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DownloadData</string>
+    <string name="default_text">Default String</string>
+    <string name="party_name_text">Party</string>
+    <string name="colon_delimiter">:</string>
+    <string name="office_name_text">Office</string>
+    <string name="phone_name_text">Phone</string>
+    <string name="district_name_text">District</string>
+    <string name="state_name_text">State</string>
+</resources>
