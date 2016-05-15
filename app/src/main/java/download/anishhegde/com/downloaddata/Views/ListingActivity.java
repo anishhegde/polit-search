@@ -1,5 +1,6 @@
 package download.anishhegde.com.downloaddata.Views;
 
+import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
@@ -16,6 +17,7 @@ public class ListingActivity extends AppCompatActivity {
     PoliticianModel mPoliticianModel;
     protected ListView mPolList;
     protected PoliticianListAdapter mAdapter;
+    protected ProgressDialog mProgressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,11 +34,17 @@ public class ListingActivity extends AppCompatActivity {
     }
 
     private void loadData(){
+        mProgressDialog = new ProgressDialog(ListingActivity.this);
+        mProgressDialog.setCancelable(false);
+        mProgressDialog.setMessage("Loading..");
+        mProgressDialog.show();
         DownloadManager.Instance().downloadData(Utils.url,mPoliticianModel,new DownloadEventListener(){
 
             @Override
             public void dataDidDownload() {
                 mAdapter.notifyDataSetChanged();
+                if(mProgressDialog.isShowing())
+                    mProgressDialog.dismiss();
             }
         });
     }

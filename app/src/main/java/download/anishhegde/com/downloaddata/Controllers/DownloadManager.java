@@ -23,8 +23,8 @@ public class DownloadManager {
     }
 
     public void downloadData(String inUrl, BaseModel inModel, DownloadEventListener listener){
-        new DownloadDataTask().execute(inUrl,inModel);
         mListener = listener;
+        new DownloadDataTask().execute(inUrl,inModel);
     }
 
     private class DownloadDataTask extends AsyncTask<Object,Void,Void> {
