@@ -18,18 +18,22 @@ public class DataDownloader {
     }
 
     public String downloadData(String url) {
+        HttpURLConnection connection = null;
         String inStreamString = "";
         try {
             URL apiUrl = new URL(url);
-            HttpURLConnection connection = (HttpURLConnection) apiUrl.openConnection();
+             connection = (HttpURLConnection) apiUrl.openConnection();
             inStreamString = getStringFromStream(connection.getInputStream());
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            if (connection != null) {
+                connection.disconnect();
+            }
         }
-
-        return inStreamString ;
+            return inStreamString ;
     }
 
     String getStringFromStream(InputStream in){
